@@ -3,7 +3,10 @@
   "version": "2.5.1",
   "description": "An mutable object-based log format designed for chaining & objectMode streams.",
   "main": "index.js",
-  "browser": "dist/browser.js",
+  "browser": {
+	"index.js": "./browser.js",
+	"@colors/colors/safe": "./colors-browser.js"
+  },
   "scripts": {
     "lint": "eslint *.js test/*.js examples/*.js --resolve-plugins-relative-to ./node_modules/@dabh/eslint-config-populist",
     "pretest": "npm run lint && npm run build",
